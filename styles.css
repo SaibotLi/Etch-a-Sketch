@@ -1,3 +1,9 @@
+:root {
+--grid-width: 600px;
+--accent-color: #04AA6D;
+--inactive-color: rgb(0, 0, 0, 0.25);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +13,21 @@ body {
     background-color: aliceblue;
 }
 
+.container {
+    margin: 0 auto;
+    width: var(--grid-width);
+}
+
+.top {
+    display:flex;
+    margin: 100px;
+    padding:3px;
+    margin-top:100px;
+    background-color: white;
+    color: var(--inactive-color);
+    width:fit-content;
+    margin-bottom: 6px;
+}
 #sketch-area {
     display:flex;
     flex-wrap: wrap;
@@ -19,8 +40,9 @@ body {
     border: 1px solid whitesmoke;
 }
 
-#slider-container {
-    margin: 0 auto;
+#grid-toggle {
+    cursor: pointer;
+
 }
 
 .slider {
@@ -50,13 +72,14 @@ body {
     appearance: none;
     width: 25px;
     height: 25px;
-    background: #04AA6D;
+    background: var(--accent-color);
     cursor: pointer;
 }
+
 /*Modzilla config.*/
 .slider::-moz-range.thumb {
     width: 25px;
     height: 25px;
-    background: #04AA6D;
+    background: var(--accent-color);
     cursor: pointer;
 }
