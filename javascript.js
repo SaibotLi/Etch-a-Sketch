@@ -34,4 +34,12 @@ function removeGridCells() {
         sketchArea.removeChild(sketchArea.firstChild); // Remove it
     }
 }
+
+slider.oninput = function () {
+    let txt = `${this.value} x ${this.value} (Resolution)`;
+    sliderValue.innerHTML = txt;
+    removeGridCells();
+    createGridCells(this.value);
+}
+
 createGridCells(16);

@@ -11,7 +11,7 @@ body {
     display:flex;
     flex-wrap: wrap;
     background-color: white;
-    margin: 100px auto;
+    margin: 100px auto 0 auto;
     box-shadow: 10px 10px rgba(0, 170, 255, 0.034);
 }
 
