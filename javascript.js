@@ -29,4 +29,9 @@ function createGridCells(squaresPerSide) {
     }
 } 
 
+function removeGridCells() {
+    while (sketchArea.firstChild) { // If it has firstChild
+        sketchArea.removeChild(sketchArea.firstChild); // Remove it
+    }
+}
 createGridCells(16);
