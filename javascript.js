@@ -53,6 +53,7 @@ function removeGridCells() {
 }
 
 slider.oninput = function () {
+    squaresPerSide = this.value;
     let txt = `${this.value} x ${this.value} (Resolution)`;
     sliderValue.innerHTML = txt;
     removeGridCells();
