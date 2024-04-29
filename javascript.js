@@ -6,6 +6,7 @@ const sketchArea = document.querySelector("#sketch-area");
 const slider = document.querySelector("#slider");
 const sliderValue = document.querySelector("#slider-value");
 const gridToggle = document.querySelector("#grid-toggle");
+const clearButton = document.querySelector("#clear");
 
 let squaresPerSide = 16;
 let gridVisible = false;
@@ -67,6 +68,18 @@ slider.oninput = function () {
     createGridSquares();
 }
 
+
+function clearSketch(){
+    removeGridSquares();
+    createGridSquares();
+}
+
+function confirmClear(){
+    if (confirm("Your sketch will be deleted!")) clearSketch();
+}
+
+
 gridToggle.addEventListener("click", toggleGrid);
+clearButton.addEventListener("click", confirmClear);
 
 createGridSquares();
